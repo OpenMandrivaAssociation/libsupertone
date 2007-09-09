@@ -1,10 +1,11 @@
 %define	major 0
-%define libname	%mklibname supertone %{major}
+%define libname %mklibname supertone %{major}
+%define develname %mklibname supertone -d
 
 Summary:	A library for supervisory tone detection and generation
 Name:		libsupertone
 Version:	0.0.2
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	GPL
 Group:		System/Libraries
 URL:		http://www.soft-switch.org/libsupertone
@@ -32,14 +33,14 @@ Group:          System/Libraries
 libsupertone is a library for the detection and generation of supervisory tones on
 telephony interfaces.
 
-%package -n	%{libname}-devel
+%package -n	%{develname}
 Summary:	Header files and libraries needed for development with libsupertone.
 Group:		Development/C
-Provides:	%{name}-devel = %{version}-%{release}
-Obsoletes:	%{name}-devel
 Requires:	%{libname} = %{version}
+Provides:	%{name}-devel = %{version}-%{release}
+Obsoletes:	%{mklibname supertone 0 -d}
 
-%description -n	%{libname}-devel
+%description -n	%{develname}
 This package includes the header files and libraries needed for
 developing programs using libsupertone.
 
@@ -53,7 +54,7 @@ find . -type f|xargs file|grep 'text'|cut -d: -f1|xargs perl -p -i -e 's/\r//'
 
 %build
 export WANT_AUTOCONF_2_5=1
-libtoolize --copy --force && aclocal-1.7 && autoconf && automake-1.7 --add-missing --copy
+libtoolize --copy --force; aclocal-1.7; autoconf; automake-1.7 --add-missing --copy
 
 %configure2_5x
 
@@ -78,11 +79,9 @@ make CFLAGS="%{optflags} -fPIC"
 %doc AUTHORS COPYING ChangeLog NEWS README
 %{_libdir}/*.so.*
 
-%files -n %{libname}-devel
+%files -n %{develname}
 %defattr(-, root, root)
 %{_includedir}/*.h
 %{_libdir}/*.so
 %{_libdir}/*.a
 %{_libdir}/*.la
-
-
