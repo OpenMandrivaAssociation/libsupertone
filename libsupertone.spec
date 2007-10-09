@@ -34,7 +34,7 @@ libsupertone is a library for the detection and generation of supervisory tones 
 telephony interfaces.
 
 %package -n	%{develname}
-Summary:	Header files and libraries needed for development with libsupertone.
+Summary:	Header files and libraries needed for development with libsupertone
 Group:		Development/C
 Requires:	%{libname} = %{version}
 Provides:	%{name}-devel = %{version}-%{release}
