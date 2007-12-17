@@ -19,7 +19,6 @@ BuildRequires:	libxml2-devel
 BuildRequires:	jpeg-devel
 BuildRequires:	file
 BuildRequires:  spandsp-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 libsupertone is a library for the detection and generation of supervisory tones on
