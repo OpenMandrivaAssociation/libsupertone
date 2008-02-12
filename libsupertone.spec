@@ -22,16 +22,16 @@ BuildRequires:  spandsp-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
-libsupertone is a library for the detection and generation of supervisory tones on
-telephony interfaces.
+libsupertone is a library for the detection and generation of supervisory tones
+on telephony interfaces.
 
 %package -n	%{libname}
 Summary:	Steve's SpanDSP library for telephony spans
 Group:          System/Libraries
 
 %description -n	%{libname}
-libsupertone is a library for the detection and generation of supervisory tones on
-telephony interfaces.
+libsupertone is a library for the detection and generation of supervisory tones
+on telephony interfaces.
 
 %package -n	%{develname}
 Summary:	Header files and libraries needed for development with libsupertone
