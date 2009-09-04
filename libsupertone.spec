@@ -5,7 +5,7 @@
 Summary:	A library for supervisory tone detection and generation
 Name:		libsupertone
 Version:	0.0.2
-Release:	%mkrel 6
+Release:	%mkrel 7
 License:	GPL
 Group:		System/Libraries
 URL:		http://www.soft-switch.org/libsupertone
