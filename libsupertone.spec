@@ -52,14 +52,10 @@ find . -type f|xargs file|grep 'CRLF'|cut -d: -f1|xargs perl -p -i -e 's/\r//'
 find . -type f|xargs file|grep 'text'|cut -d: -f1|xargs perl -p -i -e 's/\r//'
 
 %build
-export WANT_AUTOCONF_2_5=1
-libtoolize --copy --force; aclocal-1.7; autoconf; automake-1.7 --add-missing --copy
-
+autoreconf -fi
 %configure2_5x
 
 make CFLAGS="%{optflags} -fPIC"
-
-./supertone_tests
 
 %install
 rm -rf %{buildroot}
