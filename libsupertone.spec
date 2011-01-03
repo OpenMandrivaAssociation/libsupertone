@@ -5,13 +5,13 @@
 Summary:	A library for supervisory tone detection and generation
 Name:		libsupertone
 Version:	0.0.2
-Release:	%mkrel 8
+Release:	%mkrel 9
 License:	GPL
 Group:		System/Libraries
 URL:		http://www.soft-switch.org/libsupertone
 Source0:	http://www.soft-switch.org/libsupertone/libsupertone-0.0.2.tar.bz2
 BuildRequires:	autoconf2.5
-BuildRequires:	automake1.7
+BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	tiff-devel >= 3.6.1-3mdk
 BuildRequires:	libxml2-devel
