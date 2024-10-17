@@ -8,7 +8,7 @@ Version:	0.0.2
 Release:	%mkrel 9
 License:	GPL
 Group:		System/Libraries
-URL:		http://www.soft-switch.org/libsupertone
+URL:		https://www.soft-switch.org/libsupertone
 Source0:	http://www.soft-switch.org/libsupertone/libsupertone-0.0.2.tar.bz2
 BuildRequires:	autoconf2.5
 BuildRequires:	automake
