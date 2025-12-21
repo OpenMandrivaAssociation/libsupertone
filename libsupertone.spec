@@ -10,6 +10,8 @@ License:	GPL
 Group:		System/Libraries
 URL:		https://www.soft-switch.org/libsupertone
 Source0:	http://www.soft-switch.org/libsupertone/libsupertone-0.0.2.tar.bz2
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	autoconf2.5
 BuildRequires:	automake
 BuildRequires:	libtool
